@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from "swiper";
-import { Center, Text, Image, VStack } from '@chakra-ui/react'
+
+import { SlideContent } from './SlideContent';
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -14,35 +15,22 @@ export function Slider() {
       pagination={{ clickable: true }}
     >
       <SwiperSlide>
-        <Center 
-          w="1240px"
-          h="450px"
-          bgGradient="linear(0deg, rgba(28, 20, 1, 0.35), rgba(28, 20, 1, 0.35)), url('/images/europe.jpg')"
-          bgRepeat="no-repeat"
-          bgSize="cover"
-          bgPosition="100% 50%"
-          // Mover um pouco abaixo, não deve ficar 100% centralizado
-        >
-          <VStack spacing="16px">
-            <Text color="#F5F8FA" fontSize="48px" fontWeight="bold">Europa</Text>
-            <Text color="#F5F8FA" fontSize="24px" fontWeight="bold">O continente mais antigo.</Text>
-          </VStack>
-        </Center>
+        <SlideContent imageUrl='/images/north-america.jpg' title='América do Norte' subtitle='' bgPosition="100% 50%" />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="/images/europe.jpg" alt="europe" w="1240px" h="450px" />
+        <SlideContent imageUrl='/images/south-america.jpg' title='América do Sul' subtitle='' bgPosition="100% 85%" />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="/images/europe.jpg" alt="europe" w="1240px" h="450px" />
+        <SlideContent imageUrl='/images/asia.jpg' title='Ásia' subtitle='' bgPosition="100% 50%" />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="/images/europe.jpg" alt="europe" w="1240px" h="450px" />
+        <SlideContent imageUrl='/images/africa.jpg' title='África' subtitle='' bgPosition="100% 50%" />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="/images/europe.jpg" alt="europe" w="1240px" h="450px" />
+        <SlideContent imageUrl='/images/europe.jpg' title='Europa' subtitle='O continente mais antigo.' bgPosition="100% 50%" />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="/images/europe.jpg" alt="europe" w="1240px" h="450px" />
+        <SlideContent imageUrl='/images/oceania.jpg' title='Oceania' subtitle='' bgPosition="100% 50%" />
       </SwiperSlide>
     </Swiper>
   )

@@ -13,11 +13,11 @@ export function Banner() {
         bgRepeat="no-repeat"
         bgSize="cover"
       >
-        <Box color="#F5F8FA" textDecoration="underline">
-          <Text fontSize={36}>5 Continentes,<br/>infinitas possibilidades. </Text>
-          <Text fontSize={20}>Chegou a hora de tirar do papel a viagem que você<br/>sempre sonhou.</Text>
+        <Box color="#F5F8FA">
+          <Text fontSize={36} fontWeight="medium" textDecoration="underline">5 Continentes,<br/>infinitas possibilidades. </Text>
+          <Text fontSize={20} fontWeight="regular" marginTop="20px">Chegou a hora de tirar do papel a viagem que você<br/>sempre sonhou.</Text>
         </Box>
-        <Image src="/images/banner-airplane.png" alt="airplane" marginTop={28} />
+        <Image src="/images/banner-airplane.png" alt="airplane" marginTop="80px" />
       </Flex>
     </Box>
   )

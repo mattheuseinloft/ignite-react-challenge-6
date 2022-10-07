@@ -41,7 +41,7 @@ const Home: NextPage = () => {
       </Center>
 
       <Center mt="52px">
-        <Text align="center" fontSize="36px" color="#47585B">
+        <Text align="center" fontSize="36px" fontWeight="medium" color="#47585B">
           Vamos nessa?<br />Então escolha seu continente
         </Text>
       </Center>
