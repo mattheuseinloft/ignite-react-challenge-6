@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Flex, Divider, Center, Text, Stack } from '@chakra-ui/react'
+import { Flex, Divider, Center, Text } from '@chakra-ui/react'
 
 import { Header } from '../components/Header';
 import { Banner } from '../components/Banner';

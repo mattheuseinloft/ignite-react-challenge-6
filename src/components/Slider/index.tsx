@@ -15,22 +15,22 @@ export function Slider() {
       pagination={{ clickable: true }}
     >
       <SwiperSlide>
-        <SlideContent imageUrl='/images/north-america.jpg' title='América do Norte' subtitle='' bgPosition="100% 50%" />
+        <SlideContent slug='north-america' title='América do Norte' subtitle='' bgPosition="100% 50%" />
       </SwiperSlide>
       <SwiperSlide>
-        <SlideContent imageUrl='/images/south-america.jpg' title='América do Sul' subtitle='' bgPosition="100% 85%" />
+        <SlideContent slug='south-america' title='América do Sul' subtitle='' bgPosition="100% 85%" />
       </SwiperSlide>
       <SwiperSlide>
-        <SlideContent imageUrl='/images/asia.jpg' title='Ásia' subtitle='' bgPosition="100% 50%" />
+        <SlideContent slug='asia' title='Ásia' subtitle='' bgPosition="100% 50%" />
       </SwiperSlide>
       <SwiperSlide>
-        <SlideContent imageUrl='/images/africa.jpg' title='África' subtitle='' bgPosition="100% 50%" />
+        <SlideContent slug='africa' title='África' subtitle='' bgPosition="100% 50%" />
       </SwiperSlide>
       <SwiperSlide>
-        <SlideContent imageUrl='/images/europe.jpg' title='Europa' subtitle='O continente mais antigo.' bgPosition="100% 50%" />
+        <SlideContent slug='europe'  title='Europa' subtitle='O continente mais antigo.' bgPosition="100% 50%" />
       </SwiperSlide>
       <SwiperSlide>
-        <SlideContent imageUrl='/images/oceania.jpg' title='Oceania' subtitle='' bgPosition="100% 50%" />
+        <SlideContent slug='oceania'  title='Oceania' subtitle='' bgPosition="100% 50%" />
       </SwiperSlide>
     </Swiper>
   )
