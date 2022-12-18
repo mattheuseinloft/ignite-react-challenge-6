@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { Flex, Text, HStack, Box } from '@chakra-ui/react'
+import { Flex, Text, HStack, Box, Image } from '@chakra-ui/react'
 
 import { Header } from '../../components/Header';
 
@@ -46,7 +46,7 @@ export default function Continent() {
         <Text color="#F5F8FA" fontSize="48px" fontWeight="semibold">{continent?.title}</Text>
       </Flex>
 
-      <HStack my="80px" mx="140px" spacing="70px">
+      <Flex my="80px" mx="140px" justifyContent="space-between">
         <Text color="#47585B" fontSize="24px" fontWeight="regular" width="600px" textAlign="justify">{continent?.info}</Text>
         <HStack spacing="42px">
           <Box textAlign="center">
@@ -62,12 +62,20 @@ export default function Continent() {
             <Text color="#47585B" fontSize="24px" fontWeight="600">cidades +100</Text>
           </Box>
         </HStack>
-      </HStack>
+      </Flex>
 
       <Box mx="140px">
         <Text fontSize="36px" fontWeight="medium" color="#47585B">
           Cidades +100
         </Text>
+
+        <Box width="256px" height="279px">
+          <Image src='/images/europe.jpg' alt='teste' borderTopRadius={10} />
+          <Box backgroundColor="#FFFFFF" border="1px solid #FFBA08">
+            <Text color="#47585B" fontSize="20px" fontWeight="semibold">Londres</Text>
+            <Text color="#999999" fontSize="16px" fontWeight="medium">Reino Unido</Text>
+          </Box>
+        </Box>
       </Box>
     </>
   );
