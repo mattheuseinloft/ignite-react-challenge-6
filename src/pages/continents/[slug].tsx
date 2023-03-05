@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { Flex, Text, HStack, Box, Image } from '@chakra-ui/react'
+import { Flex, Text, HStack, Box, Image, Avatar } from '@chakra-ui/react'
 
 import { Header } from '../../components/Header';
 
@@ -9,7 +9,8 @@ export default function Continent() {
 
   const getContinentData = (slug: string) => {
     switch (slug) {
-      case 'europe':
+      // case 'europe':
+      default:
         return {
           title: 'Europa',
           info: 'A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste',
@@ -17,11 +18,11 @@ export default function Continent() {
           languagesCount: 60,
           citiesPlus100Count: 27,
           citiesPlus100: [
-            { name: 'Londres', country: 'Reino Unido' },
-            { name: 'Paris', country: 'França' },
-            { name: 'Roma', country: 'Itália' },
-            { name: 'Praga', country: 'República Tcheca' },
-            { name: 'Amsterdã', country: 'Holanda' }
+            { name: 'Londres', country: 'Reino Unido', flag: '/images/continentData/europe/uk-flag.png', image: '/images/continentData/europe/uk-city.png' },
+            { name: 'Paris', country: 'França', flag: '/images/continentData/europe/fr-flag.png', image: '/images/continentData/europe/fr-city.png' },
+            { name: 'Roma', country: 'Itália', flag: '/images/continentData/europe/it-flag.png', image: '/images/continentData/europe/it-city.png' },
+            { name: 'Praga', country: 'República Tcheca', flag: '/images/continentData/europe/cz-flag.png', image: '/images/continentData/europe/cz-city.png' },
+            { name: 'Amsterdã', country: 'Holanda', flag: '/images/continentData/europe/ne-flag.png', image: '/images/continentData/europe/ne-city.png' }
           ],
         }
     }
@@ -64,18 +65,25 @@ export default function Continent() {
         </HStack>
       </Flex>
 
-      <Box mx="140px">
+      <Box mx="140px" marginBottom="35px">
         <Text fontSize="36px" fontWeight="medium" color="#47585B">
           Cidades +100
         </Text>
 
-        <Box width="256px" height="279px">
-          <Image src='/images/europe.jpg' alt='teste' borderTopRadius={10} />
-          <Box backgroundColor="#FFFFFF" border="1px solid #FFBA08">
-            <Text color="#47585B" fontSize="20px" fontWeight="semibold">Londres</Text>
-            <Text color="#999999" fontSize="16px" fontWeight="medium">Reino Unido</Text>
+        <Flex as="div" flexWrap="wrap" gap="45px">
+          {continent?.citiesPlus100.map((city, index) => (
+            <Box key={index} width="256px" height="279px">
+            <Image src={city.image} alt='teste' borderTopRadius={4} />
+            <Box display="flex" justifyContent="space-between" alignItems="center" backgroundColor="#FFFFFF" border="1px solid #FFBA08" borderBottomRadius={4} padding="18px 24px 24px 24px">
+              <Box>
+                <Text color="#47585B" fontSize="20px" fontWeight="semibold" lineHeight="25px">{city.name}</Text>
+                <Text color="#999999" fontSize="16px" fontWeight="medium" lineHeight="25px" marginTop="12px">{city.country}</Text>
+              </Box>
+              <Avatar src={city.flag} size="sm" />
+            </Box>
           </Box>
-        </Box>
+          ))}
+        </Flex>
       </Box>
     </>
   );

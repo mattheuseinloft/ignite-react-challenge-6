@@ -2,7 +2,7 @@ import { Flex, Box, Text, Image } from '@chakra-ui/react'
 
 export function Banner() {
   return (
-    <Box h={368}>
+    <Box h="335px">
       <Flex
         as="div"
         align="center"
@@ -17,7 +17,7 @@ export function Banner() {
           <Text fontSize={36} fontWeight="medium" textDecoration="underline">5 Continentes,<br/>infinitas possibilidades. </Text>
           <Text fontSize={20} fontWeight="regular" marginTop="20px">Chegou a hora de tirar do papel a viagem que você<br/>sempre sonhou.</Text>
         </Box>
-        <Image src="/images/banner-airplane.png" alt="airplane" marginTop="80px" />
+        <Image src="/images/banner-airplane.png" alt="airplane" width="417px" height="270" marginTop="80px" style={{ transform: "rotate(3deg)" }} />
       </Flex>
     </Box>
   )
